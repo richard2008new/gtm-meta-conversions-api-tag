@@ -1,5 +1,21 @@
+# Copyright 2024 ftargeting
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 homepage: "https://ftargeting.com"
-documentation: "https://github.com/ftargeting/gtm-meta-conversions-api-tag"
+documentation: "https://github.com/ftargeting/gtm-meta-conversion-api-tag"
 versions:
-  - sha: c2c7a9ab349284f430aec9229df650e47b716258
-    changeNotes: Initial release.
+  - sha: 9424eeafe7280c210ce758d5d98ece65989928bb
+    changeNotes: Added support for IP and user agent anonymisation
+  - sha: a97c8504e6d5d8f306e56fe0651cd18158f65ef3
+    changeNotes: Initial version

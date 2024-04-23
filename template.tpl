@@ -238,15 +238,6 @@ ___TEMPLATE_PARAMETERS___
     "groupStyle": "ZIPPY_OPEN_ON_PARAM",
     "subParams": [
       {
-        "type": "SELECT",
-        "name": "eventData",
-        "displayName": "Object Properties Variable",
-        "macrosInSelect": true,
-        "selectItems": [],
-        "simpleValueType": true,
-        "notSetText": "Undefined"
-      },
-      {
         "type": "SIMPLE_TABLE",
         "name": "eventDataTable",
         "simpleTableColumns": [
@@ -276,7 +267,8 @@ ___TEMPLATE_PARAMETERS___
         ],
         "newRowButtonText": "Add Property"
       }
-    ]
+    ],
+    "help": "事件附帶的參數，可填入 currency、value (選填)"
   },
   {
     "type": "GROUP",
@@ -314,7 +306,8 @@ ___TEMPLATE_PARAMETERS___
         ],
         "newRowButtonText": "Add Property"
       }
-    ]
+    ],
+    "help": "使用者的資料，可填入 email、phone (選填)"
   }
 ]
 
