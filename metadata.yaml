@@ -13,7 +13,7 @@
 # limitations under the License.
 
 homepage: "https://ftargeting.com"
-documentation: "https://github.com/ftargeting/gtm-meta-conversion-api-tag"
+documentation: "https://github.com/ftargeting/gtm-meta-conversions-api-tag"
 versions:
-  - sha: a97c8504e6d5d8f306e56fe0651cd18158f65ef
+  - sha: d8b00580b4f067fc184b245555104ead2047ce98
     changeNotes: first commit
