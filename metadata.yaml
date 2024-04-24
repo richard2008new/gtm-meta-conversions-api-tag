@@ -15,5 +15,5 @@
 homepage: "https://ftargeting.com"
 documentation: "https://github.com/ftargeting/gtm-meta-conversions-api-tag"
 versions:
-  - sha: d8b00580b4f067fc14b245555104ead2047ce98
+  - sha: de369505f82b94044550ac5ec957312280c5217e
     changeNotes: first commit
