@@ -314,7 +314,7 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
-const encodeUriComponent=require("encodeUriComponent"),getCookieValues=require("getCookieValues"),getReferrerUrl=require("getReferrerUrl"),getType=require("getType"),getUrl=require("getUrl"),JSON=require("JSON"),makeTableMap=require("makeTableMap"),parseUrl=require("parseUrl"),sendPixel=require("sendPixel"),event=data.standardEvent||data.customEvent,eventId=data.eventId,access_token=data.access_token,test_event_code=data.test_event_code,id=data.id;const mergeObjects=(e,r)=>{for(let t in r)r.hasOwnProperty(t)&&(e[t]=r[t]);return e;};const properties1="object"===getType(data.eventData)?data.eventData:{},propertiesTable1=data.eventDataTable&&data.eventDataTable.length?makeTableMap(data.eventDataTable,"name","value"):{},mergedProperties1=mergeObjects(properties1,propertiesTable1),properties2="object"===getType(data.userData)?data.userData:{},propertiesTable2=data.userDataTable&&data.userDataTable.length?makeTableMap(data.userDataTable,"name","value"):{},mergedProperties2=mergeObjects(properties2,propertiesTable2);let puguh=parseUrl(getUrl()).href;const transformData=() =>{let transformedUrl=data.url+'?v=1&t=pp_capi';const parsedUrl=parseUrl(getUrl());const parameters=[ {key:'dl',value:parsedUrl.href}, {key:'dr',value:getReferrerUrl()}, {key:'en',value:event}, {key:'eid',value:eventId}, {key:'act',value:access_token}, {key:'tec',value:test_event_code}, {key:'fbc',value:getCookieValues('_fbc')}, {key:'fbp',value:getCookieValues('_fbp')}, {key:'pid',value:id}, {key:'aip',value:data.anonymiseIP}, {key:'aua',value:data.anonymiseUserAgent}];for(let parameter of parameters){if(parameter.value==undefined||parameter.value==''){continue;};transformedUrl+='&'+parameter.key+'='+encodeUriComponent(parameter.value); }let uscdud=0;for(let property in mergedProperties1){let value=mergedProperties1[property];if(['array','object'].indexOf(getType(value))>-1){value=JSON.stringify(value);};transformedUrl+='&cd['+property+']='+encodeUriComponent(value);uscdud=1; }for(let property in mergedProperties2){let value=mergedProperties2[property];if(['array','object'].indexOf(getType(value))>-1){value=JSON.stringify(value);};if(property=="email"){property="em";};if(property=="phone"){property="ph";};transformedUrl+='&ud['+property+']='+encodeUriComponent(value);uscdud=1; }if(uscdud==1){transformedUrl=transformedUrl+"&uscdud=1";}return transformedUrl;};const url=transformData();puguh.indexOf("gtm-msr")>-1||puguh.indexOf("msr.appspot.com")>-1||puguh.indexOf("id=GTM")>-1||sendPixel(url,data.gtmOnSuccess,data.gtmOnFailure);
+const encodeUriComponent=require("encodeUriComponent"),getCookieValues=require("getCookieValues"),getReferrerUrl=require("getReferrerUrl"),getType=require("getType"),getUrl=require("getUrl"),JSON=require("JSON"),makeTableMap=require("makeTableMap"),parseUrl=require("parseUrl"),sp=require("sendPixel"),Math=require("Math"),makeString=require("makeString"),ij=require("injectScript");var cfw=require("copyFromWindow");const event=data.standardEvent||data.customEvent,eventId=data.eventId,access_token=data.access_token,test_event_code=data.test_event_code,id=data.id;const mergeObjects=(e,r)=>{for(let t in r)r.hasOwnProperty(t)&&(e[t]=r[t]);return e;};function ec(e){let r=cfw("sha256");return r&&(e=r(e)),e;}const properties1="object"===getType(data.eventData)?data.eventData:{},propertiesTable1=data.eventDataTable&&data.eventDataTable.length?makeTableMap(data.eventDataTable,"name","value"):{},mergedProperties1=mergeObjects(properties1,propertiesTable1);const properties2="object"===getType(data.userData)?data.userData:{},propertiesTable2=data.userDataTable&&data.userDataTable.length?makeTableMap(data.userDataTable,"name","value"):{},mergedProperties2=mergeObjects(properties2,propertiesTable2);let nhs=0;for(let ppt in mergedProperties2){let vl=mergedProperties2[ppt];if(vl==undefined||vl==''){continue;};if(ppt=="email"||ppt=="phone"){ nhs=1; }}function cev(){  let puguh=parseUrl(getUrl()).href;  const transformData=() =>{    let transformedUrl=data.url+"?v=1&t=pp_capi";const parsedUrl=parseUrl(getUrl());    const parameters=[{key:"dl",value:parsedUrl.href},{key:"dr",value:getReferrerUrl()},{key:"en",value:event},{key:"eid",value:eventId},{key:"act",value:access_token},{key:"tec",value:test_event_code},{key:"fbc",value:getCookieValues("_fbc")},{key:"fbp",value:getCookieValues("_fbp")},{key:"pid",value:id},{key:"aip",value:data.anonymiseIP},{key:"aua",value:data.anonymiseUserAgent}];      for(let p of parameters){if(p.value==undefined||p.value==''){continue;};transformedUrl+='&'+p.key+'='+encodeUriComponent(p.value);}  let uscdud=0;for(let ppt in mergedProperties1){let vl=mergedProperties1[ppt];if(vl==undefined||vl==''){continue;};if(['array','object'].indexOf(getType(vl))>-1){vl=JSON.stringify(vl);};transformedUrl+='&cd['+ppt+']='+encodeUriComponent(vl);uscdud=1;}  for(let ppt in mergedProperties2){let vl=mergedProperties2[ppt];if(vl==undefined||vl==''){continue;};if(ppt=="email"){if(vl.indexOf("@")==-1){continue;};ppt="em";vl=vl.trim().toLowerCase();vl=ec(vl);};if(ppt=="phone"){ppt="ph";let sptx=vl.trim().split("");let newph="";let nbl=["0","1","2","3","4","5","6","7","8","9"];for(let i=0;i<sptx.length;i++){let si=sptx[i];si=makeString(si);for(let i=0;i<nbl.length;i++){let ni=nbl[i];if(ni==si){newph=newph+si;break;};};};vl=newph;vl=ec(vl);};if(['array','object'].indexOf(getType(vl))>-1){vl=JSON.stringify(vl);};transformedUrl+='&ud['+ppt+']='+encodeUriComponent(vl);uscdud=1;}1==uscdud&&(transformedUrl+="&uscdud=1");  return transformedUrl;  };const url=transformData();puguh.indexOf("gtm-msr")>-1||puguh.indexOf("msr.appspot.com")>-1||puguh.indexOf("id=GTM")>-1||sp(url,data.gtmOnSuccess,data.gtmOnFailure);}1==nhs?ij("https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.10.0/sha256.min.js",cev,cev,"jsSHA"):cev();
 
 
 ___WEB_PERMISSIONS___
@@ -423,6 +423,93 @@ ___WEB_PERMISSIONS___
               {
                 "type": 1,
                 "string": "_fbp"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "access_globals",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "keys",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "sha256"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "inject_script",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "urls",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 1,
+                "string": "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.10.0/sha256.min.js"
               }
             ]
           }
