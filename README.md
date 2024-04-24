@@ -55,7 +55,7 @@
 #### Event ID
 
 
-Facebook Pixel和CAPI使用事件ID來去重複傳送的事件。
+Facebook Pixel 和 CAPI使用事件ID來去重複傳送的事件。
 
 
 ### User Data
