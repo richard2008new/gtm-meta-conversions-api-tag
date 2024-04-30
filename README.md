@@ -61,4 +61,4 @@ Facebook Pixel 和 CAPI使用事件ID來去重複傳送的事件。
 ### User Data
 
 
-用來傳送使用者 email 和 phone，傳送之前請先自行完成 SHA256 的編碼。
+用來傳送使用者 email 和 phone。
